@@ -13,7 +13,7 @@ const Card = () => {
           className="w-full"
         />
         <div className="flex flex-col px-4 mt-10 items-center justify-center">
-          <h1 className="text-2xl sm:text-lg md:text-lg  xl:text-xl font-bold">
+          <h1 className="text-xl sm:text-lg md:text-lg  xl:text-xl font-bold">
             DUVAR TİPİ VİTRİNLER
           </h1>
         </div>
