@@ -7,7 +7,7 @@ const Hero = () => {
       className="relative min-h-screen w-full"
       style={{
         backgroundImage:
-          "url('http://www.incase.com.tr/dosyalar/site_resim/sayfalar/9189098.JPG')",
+          "url('https://fibu.la/cache/1900_960_Projeler/5d84c6cc2fb4b48a452cadd3752eba9b.JPG')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
