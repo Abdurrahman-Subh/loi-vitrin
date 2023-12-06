@@ -3,7 +3,15 @@ import { Typography } from "@material-tailwind/react";
 import React from "react";
 const Hero = () => {
   return (
-    <div className="relative min-h-screen w-full bg-[url('http://www.incase.com.tr/dosyalar/site_resim/sayfalar/9189098.JPG')] bg-cover bg-no-repeat">
+    <div
+      className="relative min-h-screen w-full"
+      style={{
+        backgroundImage:
+          "url('http://www.incase.com.tr/dosyalar/site_resim/sayfalar/9189098.JPG')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
       <div className="grid min-h-screen px-8">
         <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">

@@ -14,7 +14,12 @@ interface AboutCardProp {
 
 export function AboutCard({ title, description, subTitle }: AboutCardProp) {
   return (
-    <Card shadow={false} className="w-full bg-[url('http://www.incase.com.tr/dosyalar/site_resim/sayfalar/9189098.JPG')] bg-cover bg-no-repeat">
+    <Card shadow={false} style={{
+      backgroundImage: "url('http://www.incase.com.tr/dosyalar/site_resim/sayfalar/9189098.JPG')",
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'
+    }}
+    className="w-full">
       <CardBody className="h-[453px] p-5 flex flex-col justify-center items-center rounded-2xl bg-gray-900/60">
         <Typography variant="h6" className="mb-4 text-center" color="white">
           {subTitle}

@@ -1,22 +1,20 @@
 "use client";
-import React from "react";
+import cn from "@/utils/helpers/cn";
 import {
-  Navbar as MTNavbar,
-  Collapse,
-  Button,
-  IconButton,
-  Typography,
-} from "@material-tailwind/react";
-import {
+  Bars3Icon,
+  CommandLineIcon,
   RectangleStackIcon,
   UserCircleIcon,
-  CommandLineIcon,
-  Squares2X2Icon,
-  XMarkIcon,
-  Bars3Icon,
+  XMarkIcon
 } from "@heroicons/react/24/solid";
-import cn from "@/utils/helpers/cn";
+import {
+  Collapse,
+  Navbar as MTNavbar,
+  Typography
+} from "@material-tailwind/react";
+import { ContactIcon, Wrench } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -27,9 +25,6 @@ const  NavItem =({ children, href }: NavItemProps) =>{
   return (
     <li>
       <Typography
-        as="a"
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
         variant="paragraph"
         className="flex items-center gap-2 font-medium"
       >
@@ -52,17 +47,17 @@ const NAV_MENU = [
   },
   {
     name: "Hizmetlerimiz",
-    icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
+    icon: Wrench,
+    href: "/hizmetlerimiz",
   },
   {
-    name: "Vitrin Tipleri",
+    name: "Müze Vitrin Tipleri",
     icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
+    href: "/muze-vitrin",
   },
   {
     name: "Iletişim",
-    icon: CommandLineIcon,
+    icon: ContactIcon,
     href: "/iletisim",
   },
 ];
@@ -97,31 +92,32 @@ const Navbar= ()=> {
 
   return (
     <MTNavbar
-      shadow={false}
+      shadow={true}
       fullWidth
       blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
+      className={cn("fixed top-0 z-50 border-0", isScrolling ? "bg-white" : "bg-[#1a202c]")}
     >
       <div className="container mx-auto flex items-center justify-between">
+        <Link href="/">
         <Typography
           color={isScrolling ? "black" : "white"}
           className={cn("text-lg font-bold", isScrolling ? "text-black" : "text-white")}
         >
           LOI VITRIN
         </Typography>
+        </Link>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
             isScrolling ? "text-gray-900" : "text-white"
           }`}
         >
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
-              <Link href={href}>
+            <Link href={href}>
             <NavItem key={name} href={href}>
               <Icon className="h-5 w-5" />
               <span>{name}</span>
             </NavItem>
-              </Link>
+            </Link>
           ))}
         </ul>
         <div
@@ -135,18 +131,25 @@ const Navbar= ()=> {
           )}
         </div>
       </div>
+      {open && (
+
       <Collapse className={cn(open ? 'block' : 'hidden')} open={open}>
         <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
           <ul className="flex flex-col gap-4 text-gray-900">
             {NAV_MENU.map(({ name, icon: Icon, href }) => (
+               <Link href={href} onClick={()=> setOpen(false)}>
+
               <NavItem key={name} href={href}>
                 <Icon className="h-5 w-5" />
                 {name}
               </NavItem>
+               </Link>
             ))}
           </ul>
         </div>
       </Collapse>
+      )}
+
     </MTNavbar>
   );
 }

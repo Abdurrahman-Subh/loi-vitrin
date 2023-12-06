@@ -7,7 +7,7 @@ const LINKS = ["Company", "About Us", "Team", "Products", "Blog"];
 
 export function Footer() {
   return (
-    <footer className="pb-5 p-10 md:pt-10 border-t shadow-lg">
+    <footer className="pb-5 bg-[#1a202c] p-10 md:pt-10 border-t shadow-lg">
       <div className="container flex flex-col mx-auto">
         <div className="flex flex-col md:flex-row items-center !justify-between">
           <Typography
