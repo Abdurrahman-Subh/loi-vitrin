@@ -97,7 +97,7 @@ const Navbar= ()=> {
       blurred={false}
       className={cn("fixed top-0 z-50 border-0", isScrolling ? "bg-white" : "bg-[#1a202c]")}
     >
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="w-[90%] sm:container mx-auto flex items-center justify-between">
         <Link href="/">
         <Typography
           color={isScrolling ? "black" : "white"}
