@@ -1,13 +1,17 @@
 import AboutEvent from "@/components/about-event";
+import AboutUs from "@/components/aboutus/AboutUs";
 import Hero from "@/components/hero/Hero";
-import SponsoredBy from "@/components/sponsored-by";
 
 export default function Home() {
   return (
-    <section>
-      <Hero />
-      <SponsoredBy />
-      <AboutEvent />
-    </section>
+    <>
+      <section>
+        <Hero />
+        <section className="px-4">
+          <AboutEvent />
+          <AboutUs />
+        </section>
+      </section>
+    </>
   );
 }

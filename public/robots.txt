@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https:/loivitrin.com/
+
+# Sitemaps
+Sitemap: https:/loivitrin.com/sitemap.xml

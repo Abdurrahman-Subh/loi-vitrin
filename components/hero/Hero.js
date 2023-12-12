@@ -6,27 +6,21 @@ const Hero = () => {
     <div
       className="relative min-h-screen w-full"
       style={{
-        backgroundImage:
-          "url('https://fibu.la/cache/1900_960_Projeler/5d84c6cc2fb4b48a452cadd3752eba9b.JPG')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: "url('/banner.jpeg')",
+        backgroundSize: "center",
+        backgroundRepeat: "contain",
       }}
     >
       <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
       <div className="grid min-h-screen px-8">
         <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
           <Typography variant="h3" color="white" className="mb-2">
-            Incase Müze Vitrin ve Sergileme
+            Sanatı Estetikle Buluşturan Müze Vitrinleri
           </Typography>
           <Typography variant="h1" color="white" className="lg:max-w-3xl">
-            Incase Müze Vitrin ve Sergileme
-          </Typography>
-          <Typography
-            variant="lead"
-            color="white"
-            className="mt-1 mb-12 w-full md:max-w-full lg:max-w-2xl"
-          >
-            Incase Müze Vitrin ve Sergileme
+            Loi Vitrin, sanat eserlerini en iyi şekilde sergileyen özgün
+            tasarımlı müze vitrinleri sunar. Estetik ve işlevsellikte birleşen
+            ürünleriyle kültürel mirası vurgular.
           </Typography>
         </div>
       </div>

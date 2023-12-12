@@ -13,6 +13,7 @@ import {
   Typography
 } from "@material-tailwind/react";
 import { ContactIcon, Wrench } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -103,7 +104,7 @@ const Navbar= ()=> {
           color={isScrolling ? "black" : "white"}
           className={cn("text-lg font-bold", isScrolling ? "text-black" : "text-white")}
         >
-          LOI VITRIN
+          <Image alt="aaa" src="/logo.jpeg" width={90} height={90} />
         </Typography>
         </Link>
         <ul
