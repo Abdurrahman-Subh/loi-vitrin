@@ -7,8 +7,8 @@ const Hero = () => {
       className="relative min-h-screen w-full"
       style={{
         backgroundImage: "url('/banner.jpeg')",
-        backgroundSize: "center",
-        backgroundRepeat: "contain",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="absolute inset-0 h-full w-full bg-gray-900/60" />

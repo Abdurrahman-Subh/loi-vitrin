@@ -1,5 +1,27 @@
 import React from "react";
 
+export const metadata = {
+  title: "Hizmetlerimiz",
+  description:
+    "Loi Vitrin olarak, müze vitrin tasarımı, özelleştirme ve satış sonrası destek gibi geniş bir hizmet yelpazesi sunmaktayız, kültürel mirasın en iyi şekilde sergilenmesine odaklanıyoruz",
+  canonical: "/hizmetlerimiz",
+  openGraph: {
+    title: "Hizmetlerimiz",
+    description:
+      "Loi Vitrin olarak, müze vitrin tasarımı, özelleştirme ve satış sonrası destek gibi geniş bir hizmet yelpazesi sunmaktayız, kültürel mirasın en iyi şekilde sergilenmesine odaklanıyoruz",
+    url: "/hizmetlerimiz",
+    type: "website",
+    images: [
+      {
+        url: "/images/loi-vitrin-hizmetlerimiz.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hizmetlerimiz",
+      },
+    ],
+  },
+};
+
 const Service = () => {
   return (
     <section className="pb-12 pt-28 lg:pb-[90px] lg:pt-[120px] px-2">

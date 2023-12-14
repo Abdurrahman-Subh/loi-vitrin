@@ -2,7 +2,63 @@ import Card from "@/components/card";
 import cn from "@/utils/helpers/cn";
 import React from "react";
 
+export const metadata = {
+  title: "Müze Vitrin ve Sergileme",
+  description:
+    "Loi Vitrin olarak, müze vitrin tasarımı, özelleştirme ve satış sonrası destek gibi geniş bir hizmet yelpazesi sunmaktayız, kültürel mirasın en iyi şekilde sergilenmesine odaklanıyoruz",
+  canonical: "/muze-vitrin",
+  openGraph: {
+    title: "Müze Vitrin ve Sergileme",
+    description:
+      "Loi Vitrin olarak, müze vitrin tasarımı, özelleştirme ve satış sonrası destek gibi geniş bir hizmet yelpazesi sunmaktayız, kültürel mirasın en iyi şekilde sergilenmesine odaklanıyoruz",
+    url: "/hizmetlerimiz",
+    type: "website",
+    images: [
+      {
+        url: "/images/loi-vitrin-hizmetlerimiz.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MÜze Vitrin",
+      },
+    ],
+  },
+};
+
 const MuzeVitrin = (props) => {
+  const images = [
+    {
+      title: "Masa Tipi Vitrin",
+      image: "/muze1.jpeg",
+    },
+    {
+      title: "Dairesel Vitrin",
+      image: "/muze2.jpeg",
+    },
+    {
+      title: "Kule Tipi Vitrin",
+      image: "/muze3.jpeg",
+    },
+    {
+      title: "Duvar Tipi Vitrin",
+      image: "/muze4.jpeg",
+    },
+    {
+      title: "Duvar Tipi Vitrin",
+      image: "/muze5.jpeg",
+    },
+    {
+      title: "Gömü vitrin",
+      image: "/muze6.jpeg",
+    },
+    {
+      title: "Askı Niş Vitrin",
+      image: "/muze7.jpeg",
+    },
+    {
+      title: "Dört Yüzü Cam Dairesel Vitrin",
+      image: "/muze8.jpeg",
+    },
+  ];
   return (
     <div
       className={cn(
@@ -11,7 +67,7 @@ const MuzeVitrin = (props) => {
         props.className
       )}
     >
-      <div className=" mx-auto mt-10 px-8 h-full">
+      <div className=" mx-auto mt-10 px-4 sm:px-8 h-full">
         <h1 className="mt-2 mb-3 text-3xl text-[#1a202c] font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl ">
           Müze Vitrin ve Sergileme
         </h1>
@@ -21,14 +77,9 @@ const MuzeVitrin = (props) => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {images.map((image, i) => (
+            <Card key={i} title={image.title} image={image.image} />
+          ))}
         </div>
       </div>
     </div>

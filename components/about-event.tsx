@@ -3,6 +3,7 @@
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import AboutCard from "@/components/about-card";
 import React from "react";
+import Image from "next/image";
 
 const EVENT_INFO = [
   {
@@ -37,12 +38,12 @@ export function AboutEvent() {
       Loi Vitrin olarak misyonumuz; müzelerin, sergi mekânlarının ve kültürel mirasın korunması ve sergilenmesinde en iyi ekipmanları ve çözümleri sunmak, her adımda kaliteyi ve yeniliği hedeflemektedir. Müşteri memnuniyetini merkeze alarak, sektörde öncü ve güvenilir bir firma olmayı sürdürmekteyiz.
       </Typography>
       <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
-      <Card shadow={false} style={{
+      {/* <Card shadow={false} style={{
       backgroundImage: "url('/main-1.jpeg')",
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }}
-    className="w-full">
+    className="w-full rounded-md ">
       <CardBody className="h-[453px] p-5 flex flex-col justify-center items-center rounded-2xl">
       </CardBody>
     </Card>
@@ -51,7 +52,7 @@ export function AboutEvent() {
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }}
-    className="w-full">
+    className="w-full rounded-md">
       <CardBody className="h-[453px] p-5 flex flex-col justify-center items-center rounded-2xl">
       </CardBody>
     </Card>
@@ -60,7 +61,7 @@ export function AboutEvent() {
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }}
-    className="w-full">
+    className="w-full rounded-md">
       <CardBody className="h-[453px] p-5 flex flex-col justify-center items-center rounded-2xl">
       </CardBody>
     </Card>
@@ -69,10 +70,48 @@ export function AboutEvent() {
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }}
-    className="w-full">
+    
+    className="w-full rounded-md">
       <CardBody className="h-[453px] p-5 flex flex-col justify-center items-center rounded-2xl">
       </CardBody>
-    </Card>
+    </Card> */}
+    
+    <div className="w-full min-h-[400px] max-h-[600px] relative mb-10  lg:mb-0">
+    <Image
+                src="/main-1.jpeg"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="relative z-40 object-cover w-full h-full rounded"
+              />
+      </div>
+      <div className="w-full min-h-[400px] max-h-[600px] relative mb-10  lg:mb-0">
+    <Image
+                src="/main-2.jpeg"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="relative z-40 object-cover w-full h-full rounded"
+              />
+      </div>
+      <div className="w-full min-h-[400px] max-h-[600px] relative mb-10 lg:mb-0">
+    <Image
+                src="/main-3.jpeg"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="relative z-40 object-cover w-full h-full rounded"
+              />
+      </div>
+        <div className="w-full min-h-[400px] max-h-[600px] relative mb-10  lg:mb-0">
+    <Image
+                src="/main-4.jpeg"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="relative z-40 object-cover w-full h-full rounded"
+              />
+      </div>
       </div>
     </section>
   );

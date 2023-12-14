@@ -57,6 +57,11 @@ const NAV_MENU = [
     href: "/muze-vitrin",
   },
   {
+    name: "Depo Sistemleri",
+    icon: CommandLineIcon,
+    href: "/depolama-sistemleri",
+  },
+  {
     name: "Iletişim",
     icon: ContactIcon,
     href: "/iletisim",
