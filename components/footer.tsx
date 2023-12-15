@@ -37,9 +37,6 @@ export function Footer() {
       <div className="container flex flex-col mx-auto">
         <div className="flex flex-col md:flex-row items-center !justify-between">
           <Typography
-            as="a"
-            href="https://www.material-tailwind.com"
-            target="_blank"
             variant="h6"
             className="text-white"
           >
@@ -62,10 +59,9 @@ export function Footer() {
           color="black"
           className="text-center mt-12 font-normal text-white"
         >
-          &copy; {CURRENT_YEAR} Made by{" "}
-          <a href="https://www.material-tailwind.com" target="_blank">
-            Abdurrahman.
-          </a>
+          &copy; {CURRENT_YEAR} {" "}
+          
+           LOİ VİTRİN
         </Typography>
       </div>
     </footer>

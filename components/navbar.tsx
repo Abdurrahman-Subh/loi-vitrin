@@ -2,7 +2,6 @@
 import cn from "@/utils/helpers/cn";
 import {
   Bars3Icon,
-  CommandLineIcon,
   RectangleStackIcon,
   UserCircleIcon,
   XMarkIcon
@@ -12,8 +11,7 @@ import {
   Navbar as MTNavbar,
   Typography
 } from "@material-tailwind/react";
-import { ContactIcon, Layout, ShoppingCart, Wrench } from "lucide-react";
-import Image from "next/image";
+import { ContactIcon, Layout, Wrench } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -58,7 +56,7 @@ const NAV_MENU = [
   },
   {
     name: "Depolama Sistemleri",
-    icon: ShoppingCart ,
+    icon: Layout ,
     href: "/depolama-sistemleri",
   },
   {
