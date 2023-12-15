@@ -12,7 +12,7 @@ import {
   Navbar as MTNavbar,
   Typography
 } from "@material-tailwind/react";
-import { ContactIcon, Wrench } from "lucide-react";
+import { ContactIcon, Layout, ShoppingCart, Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -53,12 +53,12 @@ const NAV_MENU = [
   },
   {
     name: "Müze Vitrin Tipleri",
-    icon: CommandLineIcon,
+    icon: Layout,
     href: "/muze-vitrin",
   },
   {
     name: "Depolama Sistemleri",
-    icon: CommandLineIcon,
+    icon: ShoppingCart ,
     href: "/depolama-sistemleri",
   },
   {
@@ -107,9 +107,10 @@ const Navbar= ()=> {
         <Link href="/">
         <Typography
           color={isScrolling ? "black" : "white"}
-          className={cn("text-lg font-bold", isScrolling ? "text-black" : "text-white")}
+          className={cn("text-lg font-extrabold font-serif", isScrolling ? "text-black" : "text-white")}
         >
-          <Image alt="aaa" src="/logo.jpeg" width={90} height={90} />
+          {/* <Image alt="aaa" src="/logo.jpeg" width={90} height={90} /> */}
+          LOİ Vitrin
         </Typography>
         </Link>
         <ul

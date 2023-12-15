@@ -9,10 +9,11 @@ const Hero = () => {
         backgroundImage: "url('/banner.jpeg')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
       <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-      <div className="grid min-h-screen px-8">
+      <div className="grid min-h-screen px-4 sm:px-8">
         <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
           <Typography variant="h3" color="white" className="mb-2">
             Sanatı Estetikle Buluşturan Müze Vitrinleri

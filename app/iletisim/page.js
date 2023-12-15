@@ -1,10 +1,11 @@
 "use client";
 import cn from "@/utils/helpers/cn";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const Contact = (props) => {
+  const [isSuccess, setIsSuccess] = useState(false);
   const {
     register,
     handleSubmit,
@@ -46,13 +47,16 @@ const Contact = (props) => {
 
                 <div className="flex items-center mt-2 space-x-2  ">
                   <MailIcon className="w-4 h-4 text-white font-bold" />
-                  <a className="text-white font-bold" href={`mailto:`}>
-                    emrullahcelik@gmail.com
+                  <a
+                    className="text-white font-bold"
+                    href={`mailto:loivitrin@outlook.com`}
+                  >
+                    loivitrin@outlook.com
                   </a>
                 </div>
                 <div className="flex items-center mt-2 space-x-2 ">
                   <PhoneIcon className="w-4 h-4 text-white font-bold" />
-                  <a className="text-white" href={`tel:`}>
+                  <a className="text-white" href={`tel:+905301013039`}>
                     0530 101 30 39
                   </a>
                 </div>
@@ -73,11 +77,7 @@ const Contact = (props) => {
                     type="text"
                     placeholder="Adınız Soyadınız"
                     autoComplete="false"
-                    className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 focus:ring-4  ${
-                      errors.name
-                        ? "border-red-600 focus:border-red-600 ring-red-100 "
-                        : "border-gray-300 focus:border-gray-600 ring-gray-100 "
-                    }`}
+                    className={`w-full px-4 py-3 border-2 text-black placeholder:text-gray-800 focus:ring-4`}
                     {...register("name", {
                       required: "Full name is required",
                       maxLength: 80,
@@ -100,11 +100,7 @@ const Contact = (props) => {
                     placeholder="Mail adresiniz"
                     name="email"
                     autoComplete="false"
-                    className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 focus:ring-4  ${
-                      errors.email
-                        ? "border-red-600 focus:border-red-600 ring-red-100 "
-                        : "border-gray-300 focus:border-gray-600 ring-gray-100 "
-                    }`}
+                    className={`w-full px-4 py-3 border-2 text-black placeholder:text-gray-800 focus:ring-4`}
                     {...register("email", {
                       required: "Enter your email",
                       pattern: {
@@ -124,11 +120,7 @@ const Contact = (props) => {
                   <textarea
                     name="message"
                     placeholder="Mesajınız"
-                    className={`w-full px-4 py-3 border-2 placeholder:text-gray-800  rounded-md outline-none  h-36 focus:ring-4  ${
-                      errors.message
-                        ? "border-red-600 focus:border-red-600 ring-red-100 "
-                        : "border-gray-300 focus:border-gray-600 ring-gray-100"
-                    }`}
+                    className={`w-full px-4 py-3 border-2 text-black placeholder:text-gray-800  rounded-md outline-none  h-36 focus:ring-4`}
                     {...register("message", {
                       required: "Enter your Message",
                     })}
@@ -174,12 +166,14 @@ const Contact = (props) => {
 
               {isSubmitSuccessful && isSuccess && (
                 <div className="mt-3 text-sm text-center text-green-500">
-                  {message || "Success. Message sent successfully"}
+                  {"Mesaajınız başarıyla gönderildi."}
                 </div>
               )}
               {isSubmitSuccessful && !isSuccess && (
                 <div className="mt-3 text-sm text-center text-red-500">
-                  {message || "Something went wrong. Please try later."}
+                  {
+                    "Bir şeyler ters gitti. Lütfen sonra tekrar deneyin, veya mailimize basarak bize ulaşın."
+                  }
                 </div>
               )}
             </div>

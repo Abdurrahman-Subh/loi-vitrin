@@ -2,15 +2,15 @@ import React from "react";
 
 const Hakkimizda = () => {
   return (
-    <section class="flex items-center py-[100px] sm:py-[160px] bg-stone-100 font-poppins dark:bg-gray-800 ">
+    <section class="flex items-center py-[100px] sm:py-[160px] font-poppins bg-gray-800 ">
       <div class="justify-center flex-1 max-w-6xl py-10 mx-auto lg:py-6 md:px-6">
         <div class="flex flex-wrap w-full ">
           <div class="w-full px-4 mb-10 lg:mb-0 ">
             <div class="relative">
-              <h1 class="absolute -top-20 left-0 text-[20px] lg:text-[100px] text-gray-800 font-bold  dark:text-gray-200 opacity-5 md:block hidden">
+              <h1 class="absolute -top-20 left-0 text-[20px] lg:text-[100px] font-bold text-gray-200 opacity-5 md:block hidden">
                 Hakkımızda
               </h1>
-              <h1 class="pl-2 text-3xl font-bold border-l-8 border-blue-400 md:text-5xl dark:text-white">
+              <h1 class="pl-2 text-3xl font-bold border-l-8 border-blue-400 md:text-5xl text-white">
                 LOİ KİMDİR ?
               </h1>
             </div>

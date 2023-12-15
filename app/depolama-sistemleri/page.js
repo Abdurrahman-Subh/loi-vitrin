@@ -27,39 +27,39 @@ export const metadata = {
 const Depo = (props) => {
   const images = [
     {
-      title: "13li Tablo Saklama Sistemi",
+      title: "Tablo Saklama Sistemi",
       image: "/depo1.jpeg",
     },
     {
-      title: "15li Açık Depolama Sistemi",
+      title: "Açık Depolama Sistemi",
       image: "/depo2.jpeg",
     },
     {
-      title: "16lı Kompakt Depolama Sistemi",
+      title: "Kompakt Depolama Sistemi",
       image: "/depo3.jpeg",
     },
     {
-      title: "14lü Açık Depolama Sistemi",
+      title: "Açık Depolama Sistemi",
       image: "/depo4.jpeg",
     },
     {
-      title: "18li Rulo Saklamalı Dolap",
+      title: "Rulo Saklamalı Dolap",
       image: "/depo5.jpeg",
     },
     {
-      title: "19lu Rulo Saklımalı Dolap",
+      title: "Rulo Saklımalı Dolap",
       image: "/depo6.jpeg",
     },
     {
-      title: "20li Çekmece Dolap",
+      title: "Çekmece Dolap",
       image: "/depo7.jpeg",
     },
     {
-      title: "21li Tekli Çekmeceli Modül",
+      title: "Tekli Çekmeceli Modül",
       image: "/depo8.jpeg",
     },
     {
-      title: "17li Açık Kompakt",
+      title: "Açık Kompakt",
       image: "/depo9.jpeg",
     },
   ];

@@ -1,4 +1,5 @@
 import Card from "@/components/card";
+import MuzeCard from "@/components/muzeCard";
 import cn from "@/utils/helpers/cn";
 import React from "react";
 
@@ -47,15 +48,15 @@ const MuzeVitrin = (props) => {
       image: "/muze5.jpeg",
     },
     {
-      title: "Gömü vitrin",
+      title: "Dörtyüzü Cam Dairesel Vitrin",
       image: "/muze6.jpeg",
     },
     {
-      title: "Askı Niş Vitrin",
+      title: "Gömü Vitrin",
       image: "/muze7.jpeg",
     },
     {
-      title: "Dört Yüzü Cam Dairesel Vitrin",
+      title: "Askı Niş Vitrin",
       image: "/muze8.jpeg",
     },
   ];
@@ -78,7 +79,7 @@ const MuzeVitrin = (props) => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
           {images.map((image, i) => (
-            <Card key={i} title={image.title} image={image.image} />
+            <MuzeCard key={i} title={image.title} image={image.image} />
           ))}
         </div>
       </div>
