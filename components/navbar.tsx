@@ -12,6 +12,7 @@ import {
   Typography
 } from "@material-tailwind/react";
 import { ContactIcon, Layout, Wrench } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -99,7 +100,7 @@ const Navbar= ()=> {
       shadow={true}
       fullWidth
       blurred={false}
-      className={cn("fixed top-0 z-50 border-0", isScrolling ? "bg-white" : "bg-[#1a202c]")}
+      className={cn("fixed top-0 z-50 border-0", isScrolling ? "bg-white" : "bg-white")}
     >
       <div className="w-[90%] sm:container mx-auto flex items-center justify-between">
         <Link href="/">
@@ -107,13 +108,13 @@ const Navbar= ()=> {
           color={isScrolling ? "black" : "white"}
           className={cn("text-lg font-extrabold font-serif", isScrolling ? "text-black" : "text-white")}
         >
-          {/* <Image alt="aaa" src="/logo.jpeg" width={90} height={90} /> */}
-          LOİ Vitrin
+          <Image alt="aaa" src="/logonew.jpeg" width={100} height={100} />
+          {/* LOİ Vitrin */}
         </Typography>
         </Link>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
+            isScrolling ? "text-gray-900" : "text-gray-900"
           }`}
         >
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
