@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import Head from "next/head";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
