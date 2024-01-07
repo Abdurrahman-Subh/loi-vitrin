@@ -106,7 +106,7 @@ const Navbar= ()=> {
         <Link href="/">
         <Typography
           color={isScrolling ? "black" : "white"}
-          className={cn("text-lg font-extrabold font-serif", isScrolling ? "text-black" : "text-white")}
+          className={cn("text-lg font-extrabold font-serif text-black")}
         >
           <Image alt="aaa" src="/logonew.jpeg" width={100} height={100} />
           {/* LOİ Vitrin */}
@@ -128,7 +128,7 @@ const Navbar= ()=> {
         </ul>
         <div
           onClick={handleOpen}
-          className={cn("ml-auto inline-block lg:hidden", isScrolling ? "text-gray-600" : "text-white")}
+          className={cn("ml-auto inline-block lg:hidden text-gray-600")}
         >
           {open ? (
             <XMarkIcon strokeWidth={2} className="h-6 w-6" />

@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "Loi Vitrin, müze ve sergi vitrinleri tasarlayan öncü bir şirkettir. Sanat eserlerinin en iyi şekilde sergilenmesini sağlar. Özgün tasarımları ve kaliteli üretimiyle kültürel mirasın vurgulanmasına katkıda bulunur.",
   keywords:
-    "Müze vitrinleri, sergi vitrinleri, müze teşhircilik, sanat eserleri sergileme, özel sergi vitrinleri, antik eserler vitrini, tarihi eserler sergileme, özelleştirilmiş müze vitrinleri, kültürel miras sergileme çözümleri",
+    "Vitrin, Müze Vitrin, Müze Vitrini, Müze Vitrinleri, Müze Vitrin Sistemleri, Müze Cam Vitrin, Müze Sergi, Müze Sergi Ekipmanları, Müze Sergi Sistemleri, Müze Depolama, Müze Depolama Sistemi, Müze Depolama Sistemleri, Vitrin İçi İklimlendirme, İklimlendirme",
   image: "/logo.jpeg",
   url: "https://loivitrin.com",
 };

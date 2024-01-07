@@ -7,6 +7,8 @@ export const metadata = {
   description:
     "Loi Vitrin olarak depo sistemleri konusunda geniş bir hizmet yelpazesi sunuyoruz. Depolama çözümleri, raf sistemleri, lojistik planlama ve depo düzenleme gibi alanlarda uzmanız.",
   canonical: "/depo-sistemleri",
+  keywords:
+    "Vitrin, Müze Vitrin, Müze Vitrini, Müze Vitrinleri, Müze Vitrin Sistemleri, Müze Cam Vitrin, Müze Sergi, Müze Sergi Ekipmanları, Müze Sergi Sistemleri, Müze Depolama, Müze Depolama Sistemi, Müze Depolama Sistemleri, Vitrin İçi İklimlendirme, İklimlendirme",
   openGraph: {
     title: "Depo Sistemleri",
     description:
