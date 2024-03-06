@@ -4,12 +4,12 @@ import {
   Bars3Icon,
   RectangleStackIcon,
   UserCircleIcon,
-  XMarkIcon
+  XMarkIcon,
 } from "@heroicons/react/24/solid";
 import {
   Collapse,
   Navbar as MTNavbar,
-  Typography
+  Typography,
 } from "@material-tailwind/react";
 import { ContactIcon, Layout, Wrench } from "lucide-react";
 import Image from "next/image";
@@ -21,7 +21,7 @@ interface NavItemProps {
   href?: string;
 }
 
-const  NavItem =({ children, href }: NavItemProps) =>{
+const NavItem = ({ children, href }: NavItemProps) => {
   return (
     <li>
       <Typography
@@ -32,18 +32,18 @@ const  NavItem =({ children, href }: NavItemProps) =>{
       </Typography>
     </li>
   );
-}
+};
 
 const NAV_MENU = [
   {
     name: "Ana Sayfa",
     icon: RectangleStackIcon,
-    href: '/',
+    href: "/",
   },
   {
     name: "Hakkımızda",
     icon: UserCircleIcon,
-    href: '/hakkimizda'
+    href: "/hakkimizda",
   },
   {
     name: "Hizmetlerimiz",
@@ -57,7 +57,7 @@ const NAV_MENU = [
   },
   {
     name: "Depolama Sistemleri",
-    icon: Layout ,
+    icon: Layout,
     href: "/depolama-sistemleri",
   },
   {
@@ -67,9 +67,9 @@ const NAV_MENU = [
   },
 ];
 
-const Navbar= ()=> {
+const Navbar = () => {
   const [open, setOpen] = React.useState(false);
-  
+
   const [isScrolling, setIsScrolling] = React.useState(false);
 
   const handleOpen = () => setOpen((cur) => !cur);
@@ -100,17 +100,20 @@ const Navbar= ()=> {
       shadow={true}
       fullWidth
       blurred={false}
-      className={cn("fixed top-0 z-50 border-0", isScrolling ? "bg-white" : "bg-white")}
+      className={cn(
+        "fixed top-0 z-50 border-0",
+        isScrolling ? "bg-white" : "bg-white"
+      )}
     >
       <div className="w-[90%] sm:container mx-auto flex items-center justify-between">
         <Link href="/">
-        <Typography
-          color={isScrolling ? "black" : "white"}
-          className={cn("text-lg font-extrabold font-serif text-black")}
-        >
-          <Image alt="aaa" src="/logonew.jpeg" width={100} height={100} />
-          {/* LOİ Vitrin */}
-        </Typography>
+          <Typography
+            color={isScrolling ? "black" : "white"}
+            className={cn("text-lg font-extrabold font-serif text-black")}
+          >
+            <Image alt="aaa" src="/logo-loi.jpg" width={100} height={100} />
+            {/* LOİ Vitrin */}
+          </Typography>
         </Link>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
@@ -119,10 +122,10 @@ const Navbar= ()=> {
         >
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
             <Link href={href}>
-            <NavItem key={name} href={href}>
-              <Icon className="h-5 w-5" />
-              <span>{name}</span>
-            </NavItem>
+              <NavItem key={name} href={href}>
+                <Icon className="h-5 w-5" />
+                <span>{name}</span>
+              </NavItem>
             </Link>
           ))}
         </ul>
@@ -138,26 +141,23 @@ const Navbar= ()=> {
         </div>
       </div>
       {open && (
-
-      <Collapse className={cn(open ? 'block' : 'hidden')} open={open}>
-        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
-          <ul className="flex flex-col gap-4 text-gray-900">
-            {NAV_MENU.map(({ name, icon: Icon, href }) => (
-               <Link href={href} onClick={()=> setOpen(false)}>
-
-              <NavItem key={name} href={href}>
-                <Icon className="h-5 w-5" />
-                {name}
-              </NavItem>
-               </Link>
-            ))}
-          </ul>
-        </div>
-      </Collapse>
+        <Collapse className={cn(open ? "block" : "hidden")} open={open}>
+          <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
+            <ul className="flex flex-col gap-4 text-gray-900">
+              {NAV_MENU.map(({ name, icon: Icon, href }) => (
+                <Link href={href} onClick={() => setOpen(false)}>
+                  <NavItem key={name} href={href}>
+                    <Icon className="h-5 w-5" />
+                    {name}
+                  </NavItem>
+                </Link>
+              ))}
+            </ul>
+          </div>
+        </Collapse>
       )}
-
     </MTNavbar>
   );
-}
+};
 
 export default Navbar;
