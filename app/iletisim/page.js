@@ -45,7 +45,7 @@ const Contact = (props) => {
                   </span>
                 </div>
 
-                <div className="flex items-center mt-2 space-x-2  ">
+                {/* <div className="flex items-center mt-2 space-x-2  ">
                   <MailIcon className="w-4 h-4 text-white font-bold" />
                   <a
                     className="text-white font-bold"
@@ -53,7 +53,7 @@ const Contact = (props) => {
                   >
                     loivitrin@outlook.com
                   </a>
-                </div>
+                </div> */}
                 <div className="flex items-center mt-2 space-x-2 ">
                   <PhoneIcon className="w-4 h-4 text-white font-bold" />
                   <a className="text-white" href={`tel:+905301013039`}>
