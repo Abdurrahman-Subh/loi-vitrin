@@ -40,8 +40,7 @@ const Contact = (props) => {
                 <div className="flex items-center mt-2 space-x-2 ">
                   <MapPinIcon className="w-4 h-4 text-white font-bold" />
                   <span className="text-white font-bold">
-                    İkitelli OSB Mah, Pik Dökümcüler Sanayi Sitesi No:27, 34490
-                    İkitelli Osb/Başakşehir/İstanbul
+                    İkitelli OSB, Milas Cd. No:7, 34490 Başakşehir/İstanbul
                   </span>
                 </div>
 
