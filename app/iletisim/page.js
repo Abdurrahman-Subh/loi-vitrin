@@ -1,6 +1,7 @@
 "use client";
 import cn from "@/utils/helpers/cn";
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { Mail, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -58,6 +59,15 @@ const Contact = (props) => {
                   <a className="text-white" href={`tel:+905301013039`}>
                     0530 101 30 39
                   </a>
+                </div>
+                <div className="flex items-center mt-2 space-x-2 ">
+                  <Mail className="w-4 h-4 text-white font-bold" />
+                  <Link
+                    className="text-white"
+                    href={`mailto:loivitrinsatis@outlook.com.tr`}
+                  >
+                    loivitrinsatis@outlook.com.tr
+                  </Link>
                 </div>
               </div>
             </div>
